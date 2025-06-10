@@ -3,7 +3,7 @@ import mediapipe as mp
 import numpy as np
 
 
-class MediaPipeDetector:
+class HandLandMarker:
     def __init__(self):
         self.mp_hands = mp.solutions.hands
         self.hands = self.mp_hands.Hands()

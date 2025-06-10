@@ -8,8 +8,8 @@ class CV2CameraAdapter:
         if not self.cap.isOpened():
             raise RuntimeError("Cannot open webcam")
         while True:
-            ok, img = self.cap.read()
-            if not ok:
+            success, img = self.cap.read()
+            if not success:
                 break
             yield img
         self.cap.release()
