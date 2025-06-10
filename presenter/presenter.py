@@ -10,7 +10,7 @@ class CV2Presenter:
 
     def show(self, frame: np.ndarray, landmarks: list):
         for lm in landmarks:
-            rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            #rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             self.drawing.draw_landmarks(
                 frame, lm, self.connections
             )
