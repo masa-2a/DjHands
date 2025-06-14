@@ -18,19 +18,19 @@ class AbletonOSCAdapter:
         self.client.send_message("/live/song/start_playing", []) #fix this
 
     def pinky_function(self, handedness: str,  on: bool) : #drum kit
-        if handedness == "right":
+        if handedness == "Right":
             if on:
-                self.client.send_message("/live/clip/fire",[1, 0])
+                self.client.send_message("/live/clip_slot/fire",[1, 0])
             else:
-                self.client.send_message("/live/clip/stop", [1, 0])
+                self.client.send_message("/live/clip_slot/stop", [1, 0])
         else:
             if on:
-                self.client.send_message("/live/clip/fire", [6, 0])
+                self.client.send_message("/live/clip_slot/fire", [6, 0])
             else:
-                self.client.send_message("/live/clip/stop", [6,0])
+                self.client.send_message("/live/clip_slot/stop", [6,0])
 
-    def ring_function(self, handedness: str, on: bool): #harmonizers
-        if handedness == "right":
+    def ring_function(self, handedness: str, on: bool):
+        if handedness == "Right":
             if on:
                 self.client.send_message("/live/clip/fire",[2, 0])
             else:
@@ -42,7 +42,7 @@ class AbletonOSCAdapter:
                 self.client.send_message("/live/clip/stop", [7,0])
 
     def middle_function(self, handedness: str, on: bool): #synth
-        if handedness == "right":
+        if handedness == "Right":
             if on:
                 self.client.send_message("/live/clip/fire",[3, 0])
             else:
@@ -54,7 +54,7 @@ class AbletonOSCAdapter:
                 self.client.send_message("/live/clip/stop", [8,0])
 
     def index_function(self, handedness: str, on: bool): #bass
-        if handedness == "right":
+        if handedness == "Right":
             if on:
                 self.client.send_message("/live/clip/fire",[4, 0])
             else:
@@ -66,7 +66,7 @@ class AbletonOSCAdapter:
                 self.client.send_message("/live/clip/stop", [9,0])
 
     def thumb_function(self, handedness: str, on: bool): #vocals
-        if handedness == "right":
+        if handedness == "Right":
             if on:
                 self.client.send_message("/live/clip/fire",[5, 0])
             else:

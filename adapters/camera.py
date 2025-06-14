@@ -1,7 +1,7 @@
 import cv2
 
 class CV2CameraAdapter:
-    def __init__(self, index: int = 0):
+    def __init__(self, index: int = 1):
         self.cap = cv2.VideoCapture(index)
 
     def frames(self):
