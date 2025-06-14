@@ -55,7 +55,7 @@ python -m venv .venv
 source .venv/bin/activate  # or .venv\Scripts\activate on Windows
 ```
 
-3. Install dependencies. Might be prompted to install a moer recent version, which should work unless otherwise stated.
+3. Install dependencies. Might be prompted to install a more recent version, which should work unless otherwise stated.
 ```
 pip install -r requirements.txt
 ```
@@ -63,6 +63,12 @@ pip install -r requirements.txt
 ## Usage 🧚🏽‍♀️
 
  Run the app/main.py file and a seperate camera window should open up. Move your fingers and create some music. To end your session hit q.
+
+ Here are a few tips:  
+ 1. If you prefer that everytime you lift your finger the clip starts instantly (rather to waiting for the next quantised bar) then set quantisation to 0 from the menu. Alternatively, you can set custom quantisaion for each track for more creativity.
+ 2. Instead of using it to mix beats you can also use it to assemble songs (vocals on one hand and instruments on another).
+ 3. play around with how it detects a closed fist/ unraised fingers to find the sweet spot.
+Check out this video for a quick demo!
  
 ## License
 
