@@ -20,6 +20,18 @@ class AbletonOSCAdapter:
     def pinky_function(self, handedness: str,  on: bool) : #drum kit
         if handedness == "Right":
             if on:
+                self.client.send_message("/live/clip_slot/fire",[0, 0])
+            else:
+                self.client.send_message("/live/clip_slot/stop", [0, 0])
+        else:
+            if on:
+                self.client.send_message("/live/clip_slot/fire", [5, 0])
+            else:
+                self.client.send_message("/live/clip_slot/stop", [5,0])
+
+    def ring_function(self, handedness: str, on: bool):
+        if handedness == "Right":
+            if on:
                 self.client.send_message("/live/clip_slot/fire",[1, 0])
             else:
                 self.client.send_message("/live/clip_slot/stop", [1, 0])
@@ -29,50 +41,38 @@ class AbletonOSCAdapter:
             else:
                 self.client.send_message("/live/clip_slot/stop", [6,0])
 
-    def ring_function(self, handedness: str, on: bool):
-        if handedness == "Right":
-            if on:
-                self.client.send_message("/live/clip/fire",[2, 0])
-            else:
-                self.client.send_message("/live/clip/stop", [2, 0])
-        else:
-            if on:
-                self.client.send_message("/live/clip/fire", [7, 0])
-            else:
-                self.client.send_message("/live/clip/stop", [7,0])
-
     def middle_function(self, handedness: str, on: bool): #synth
         if handedness == "Right":
             if on:
-                self.client.send_message("/live/clip/fire",[3, 0])
+                self.client.send_message("/live/clip_slot/fire",[2, 0])
             else:
-                self.client.send_message("/live/clip/stop", [3, 0])
+                self.client.send_message("/live/clip_slot/stop", [2, 0])
         else:
             if on:
-                self.client.send_message("/live/clip/fire", [8, 0])
+                self.client.send_message("/live/clip_slot/fire", [7, 0])
             else:
-                self.client.send_message("/live/clip/stop", [8,0])
+                self.client.send_message("/live/clip_slot/stop", [7,0])
 
     def index_function(self, handedness: str, on: bool): #bass
         if handedness == "Right":
             if on:
-                self.client.send_message("/live/clip/fire",[4, 0])
+                self.client.send_message("/live/clip_slot/fire",[3, 0])
             else:
-                self.client.send_message("/live/clip/stop", [4, 0])
+                self.client.send_message("/live/clip/stop", [3, 0])
         else:
             if on:
-                self.client.send_message("/live/clip/fire", [9, 0])
+                self.client.send_message("/live/clip_slot/fire", [8, 0])
             else:
-                self.client.send_message("/live/clip/stop", [9,0])
+                self.client.send_message("/live/clip_slot/stop", [8,0])
 
     def thumb_function(self, handedness: str, on: bool): #vocals
         if handedness == "Right":
             if on:
-                self.client.send_message("/live/clip/fire",[5, 0])
+                self.client.send_message("/live/clip_slot/fire",[4, 0])
             else:
-                self.client.send_message("/live/clip/stop", [5, 0])
+                self.client.send_message("/live/clip_slot/stop", [4, 0])
         else:
             if on:
-                self.client.send_message("/live/clip/fire", [10, 0])
+                self.client.send_message("/live/clip_slot/fire", [9, 0])
             else:
-                self.client.send_message("/live/clip/stop", [10,0])
+                self.client.send_message("/live/clip_slot/stop", [9,0])

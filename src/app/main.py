@@ -1,10 +1,10 @@
 import cv2
-from adapters.camera import CV2CameraAdapter
-from adapters.detector import HandLandMarker
-from presenter.presenter import CV2Presenter
-from use_case.process_frame import ProcessFrame
-from adapters.ableton_osc import AbletonOSCAdapter
-from entities.Hands import Hand
+from src.adapters.camera import CV2CameraAdapter
+from src.adapters.detector import HandLandMarker
+from src.presenter.presenter import CV2Presenter
+from src.use_case.process_frame import ProcessFrame
+from src.adapters.ableton_osc import AbletonOSCAdapter
+from src.entities.Hands import Hand
 
 # main application file for the program
 
