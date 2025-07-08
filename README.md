@@ -36,7 +36,7 @@ This program works by implementing [Google Mediapipe Hand Landmarker](https://ai
 1. Make sure you have **Ableton Live 11 or 12**.
 2. Install [AbletonOSC](https://github.com/ideoforms/AbletonOSC) and follow the instructions given on their GitHub repo.
 3. Make sure you are in Session view on ableton. (looks like ||| on the top right)
-5. Organise 10 tracks each with 1 clip on the first clip slot (Should look something like this) Tracks 1-5 will belong to your right hand starting with your pinky for 1 and moving towards your thumb for 5. Similarly, tracks 6-10 belong to your left hand and move in the same way.
+5. Organise 10 tracks each with 1 clip on the first clip slot (Should look something like this) Tracks 1-4 will belong to your right hand starting with your index for 1 and moving towards your pinky for 4. Similarly, tracks 5-9 belong to your left hand and move in the same way.
 <img width="954" alt="Screenshot 2025-06-13 at 9 34 18 PM" src="https://github.com/user-attachments/assets/0f4e589d-b156-41c1-bea2-d09c75a15d91" />
 (If you want a track to loop while you're finger is held up make sure to enable that. You can find it after you click on the item in the clop slot and then finding the loop button in the clip properties bar at the bottom of the screen.)
 6. Once you've played around with all your sounds and everything is set up you can move to the next step.
@@ -71,6 +71,7 @@ pip install -r requirements.txt
 Check out this video for a quick demo!
  
 ## License
+
 
 ## Feedback 📈
 
