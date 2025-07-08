@@ -1,11 +1,10 @@
 from pythonosc.udp_client import SimpleUDPClient
 #for the current set of functions, ableton should be open with 10 seperate tracks.
 # 5 or less for each hand
-# 1-> thumb
-# 2-> index
-# 3-> middle
-# 4 -> ring
-# 5 -> pinky
+# 1 / 5-> index
+# 2 / 6-> middle
+# 3 / 7-> ring
+# 4 / 8-> pinky
 
 class AbletonOSCAdapter:
     def __init__(self):
@@ -20,26 +19,26 @@ class AbletonOSCAdapter:
     def pinky_function(self, handedness: str,  on: bool) : #drum kit
         if handedness == "Right":
             if on:
-                self.client.send_message("/live/clip_slot/fire",[0, 0])
+                self.client.send_message("/live/clip_slot/fire",[3, 0])
             else:
-                self.client.send_message("/live/clip_slot/stop", [0, 0])
+                self.client.send_message("/live/clip_slot/stop", [3, 0])
         else:
             if on:
-                self.client.send_message("/live/clip_slot/fire", [5, 0])
+                self.client.send_message("/live/clip_slot/fire", [8, 0])
             else:
-                self.client.send_message("/live/clip_slot/stop", [5,0])
+                self.client.send_message("/live/clip_slot/stop", [8,0])
 
     def ring_function(self, handedness: str, on: bool):
         if handedness == "Right":
             if on:
-                self.client.send_message("/live/clip_slot/fire",[1, 0])
+                self.client.send_message("/live/clip_slot/fire",[3, 0])
             else:
-                self.client.send_message("/live/clip_slot/stop", [1, 0])
+                self.client.send_message("/live/clip_slot/stop", [3, 0])
         else:
             if on:
-                self.client.send_message("/live/clip_slot/fire", [6, 0])
+                self.client.send_message("/live/clip_slot/fire", [7, 0])
             else:
-                self.client.send_message("/live/clip_slot/stop", [6,0])
+                self.client.send_message("/live/clip_slot/stop", [7,0])
 
     def middle_function(self, handedness: str, on: bool): #synth
         if handedness == "Right":
@@ -49,30 +48,30 @@ class AbletonOSCAdapter:
                 self.client.send_message("/live/clip_slot/stop", [2, 0])
         else:
             if on:
-                self.client.send_message("/live/clip_slot/fire", [7, 0])
+                self.client.send_message("/live/clip_slot/fire", [6, 0])
             else:
-                self.client.send_message("/live/clip_slot/stop", [7,0])
+                self.client.send_message("/live/clip_slot/stop", [6,0])
 
     def index_function(self, handedness: str, on: bool): #bass
         if handedness == "Right":
             if on:
-                self.client.send_message("/live/clip_slot/fire",[3, 0])
+                self.client.send_message("/live/clip_slot/fire",[1, 0])
             else:
-                self.client.send_message("/live/clip/stop", [3, 0])
+                self.client.send_message("/live/clip/stop", [1, 0])
         else:
             if on:
-                self.client.send_message("/live/clip_slot/fire", [8, 0])
+                self.client.send_message("/live/clip_slot/fire", [5, 0])
             else:
-                self.client.send_message("/live/clip_slot/stop", [8,0])
+                self.client.send_message("/live/clip_slot/stop", [5,0])
 
     def thumb_function(self, handedness: str, on: bool): #vocals
         if handedness == "Right":
             if on:
-                self.client.send_message("/live/clip_slot/fire",[4, 0])
+                self.client.send_message("/live/clip_slot/fire",[9, 0])
             else:
-                self.client.send_message("/live/clip_slot/stop", [4, 0])
+                self.client.send_message("/live/clip_slot/stop", [9, 0])
         else:
             if on:
-                self.client.send_message("/live/clip_slot/fire", [9, 0])
+                self.client.send_message("/live/clip_slot/fire", [10, 0])
             else:
-                self.client.send_message("/live/clip_slot/stop", [9,0])
+                self.client.send_message("/live/clip_slot/stop", [10,0])
